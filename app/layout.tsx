@@ -54,11 +54,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn(
-        inter.variable,
-        commitMono.variable,
-        'scroll-smooth font-sans antialiased'
-      )}
+      className={cn(inter.variable, commitMono.variable, 'scroll-smooth font-sans antialiased')}
     >
       <head>
         {styles && <style>{styles}</style>}
@@ -76,7 +72,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
           <header className="fixed top-0 left-0 z-50 flex w-full flex-row items-center justify-between px-6 py-4">
             {/* AIKO wordmark */}
             <span
-              className="text-foreground/70 select-none text-sm font-bold tracking-[0.25em] uppercase transition-opacity hover:opacity-100"
+              className="text-foreground/70 text-sm font-bold tracking-[0.25em] uppercase transition-opacity select-none hover:opacity-100"
               aria-label="AIKO AI Voice Assistant"
             >
               AIKO

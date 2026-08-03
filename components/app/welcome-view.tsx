@@ -89,7 +89,7 @@ export const WelcomeView = ({
 }: React.ComponentProps<'div'> & WelcomeViewProps) => {
   return (
     <div ref={ref} className="flex h-svh w-full items-center justify-center">
-      <section className="flex flex-col items-center justify-center gap-0 text-center px-6">
+      <section className="flex flex-col items-center justify-center gap-0 px-6 text-center">
         {/* Orb */}
         <motion.div
           initial={{ opacity: 0, scale: 0.85 }}

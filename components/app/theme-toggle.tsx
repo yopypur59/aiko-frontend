@@ -14,7 +14,7 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
   return (
     <div
       className={cn(
-        'text-foreground/60 bg-background/80 flex flex-row items-center divide-x overflow-hidden rounded-full border border-border/60 shadow-sm backdrop-blur-sm',
+        'text-foreground/60 bg-background/80 border-border/60 flex flex-row items-center divide-x overflow-hidden rounded-full border shadow-sm backdrop-blur-sm',
         className
       )}
     >
@@ -24,7 +24,7 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
         onClick={() => setTheme('light')}
         title="Light mode"
         className={cn(
-          'cursor-pointer px-2 py-1.5 transition-colors duration-150 hover:text-foreground',
+          'hover:text-foreground cursor-pointer px-2 py-1.5 transition-colors duration-150',
           theme === 'light' && 'text-foreground'
         )}
       >
@@ -40,7 +40,7 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
         onClick={() => setTheme('dark')}
         title="Dark mode"
         className={cn(
-          'cursor-pointer px-2 py-1.5 transition-colors duration-150 hover:text-foreground',
+          'hover:text-foreground cursor-pointer px-2 py-1.5 transition-colors duration-150',
           theme === 'dark' && 'text-foreground'
         )}
       >
@@ -56,7 +56,7 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
         onClick={() => setTheme('system')}
         title="System theme"
         className={cn(
-          'cursor-pointer px-2 py-1.5 transition-colors duration-150 hover:text-foreground',
+          'hover:text-foreground cursor-pointer px-2 py-1.5 transition-colors duration-150',
           theme === 'system' && 'text-foreground'
         )}
       >

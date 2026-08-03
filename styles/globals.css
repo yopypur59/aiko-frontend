@@ -11,33 +11,33 @@
   --radius: 0.75rem;
 
   /* Core surfaces */
-  --background: oklch(0.979 0.005 94.5);      /* #F8F7F4 warm off-white */
-  --foreground: oklch(0.145 0 0);              /* #1E1E1E near-black */
-  --card: oklch(1 0 0);                        /* #FFFFFF pure white surface */
+  --background: oklch(0.979 0.005 94.5); /* #F8F7F4 warm off-white */
+  --foreground: oklch(0.145 0 0); /* #1E1E1E near-black */
+  --card: oklch(1 0 0); /* #FFFFFF pure white surface */
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
 
   /* Primary — AIKO accent blue */
-  --primary: oklch(0.62 0.14 255.5);          /* #5B8DEF */
+  --primary: oklch(0.62 0.14 255.5); /* #5B8DEF */
   --primary-foreground: oklch(1 0 0);
 
   /* Secondary / muted */
-  --secondary: oklch(0.955 0.007 94);         /* #F0EEE9 warm light */
+  --secondary: oklch(0.955 0.007 94); /* #F0EEE9 warm light */
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.955 0.007 94);
-  --muted-foreground: oklch(0.46 0 0);        /* #666666 */
+  --muted-foreground: oklch(0.46 0 0); /* #666666 */
   --accent: oklch(0.955 0.007 94);
   --accent-foreground: oklch(0.205 0 0);
 
   /* Feedback */
   --destructive: oklch(0.577 0.245 27.325);
-  --success: oklch(0.62 0.17 155);            /* #30B566 */
+  --success: oklch(0.62 0.17 155); /* #30B566 */
 
   /* Borders */
-  --border: oklch(0.925 0.004 94);            /* #ECECEC */
+  --border: oklch(0.925 0.004 94); /* #ECECEC */
   --input: oklch(0.925 0.004 94);
-  --ring: oklch(0.62 0.14 255.5);             /* matches primary */
+  --ring: oklch(0.62 0.14 255.5); /* matches primary */
 
   /* Sidebar */
   --sidebar: oklch(1 0 0);
@@ -57,7 +57,7 @@
   --chart-5: oklch(0.769 0.188 70.08);
 
   /* AIKO custom tokens */
-  --aiko-accent: #5B8DEF;
+  --aiko-accent: #5b8def;
   --aiko-accent-glow: rgba(91, 141, 239, 0.15);
   --aiko-orb-size: 200px;
 }
@@ -66,15 +66,15 @@
    AIKO DESIGN SYSTEM — Dark Mode
    ============================================================ */
 .dark {
-  --background: oklch(0.11 0 0);             /* #111111 */
-  --foreground: oklch(0.95 0 0);             /* #F3F3F3 */
-  --card: oklch(0.142 0 0);                  /* #181818 */
+  --background: oklch(0.11 0 0); /* #111111 */
+  --foreground: oklch(0.95 0 0); /* #F3F3F3 */
+  --card: oklch(0.142 0 0); /* #181818 */
   --card-foreground: oklch(0.95 0 0);
   --popover: oklch(0.18 0 0);
   --popover-foreground: oklch(0.95 0 0);
 
   /* Primary — AIKO accent blue dark */
-  --primary: oklch(0.71 0.14 255.5);         /* #79A8FF */
+  --primary: oklch(0.71 0.14 255.5); /* #79A8FF */
   --primary-foreground: oklch(0.1 0 0);
 
   --secondary: oklch(0.19 0 0);
@@ -85,7 +85,7 @@
   --accent-foreground: oklch(0.95 0 0);
 
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(0.24 0 0);                 /* #2A2A2A */
+  --border: oklch(0.24 0 0); /* #2A2A2A */
   --input: oklch(0.24 0 0);
   --ring: oklch(0.71 0.14 255.5);
 
@@ -105,7 +105,7 @@
   --chart-5: oklch(0.645 0.246 16.439);
 
   /* AIKO custom tokens — dark */
-  --aiko-accent: #79A8FF;
+  --aiko-accent: #79a8ff;
   --aiko-accent-glow: rgba(121, 168, 255, 0.12);
 }
 
@@ -173,7 +173,8 @@
 
 /* Idle orb breathing pulse */
 @keyframes aiko-pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
     opacity: 0.85;
   }
@@ -209,8 +210,12 @@
 
 /* Gentle shimmer sweep */
 @keyframes aiko-shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
 }
 
 /* ============================================================

@@ -58,9 +58,7 @@ export function AikoStatus({ state = 'connecting', className }: AikoStatusProps)
         <span className={`inline-block h-1.5 w-1.5 rounded-full ${dotClass}`} aria-hidden="true" />
 
         {/* Status label */}
-        <span className="text-muted-foreground text-sm font-medium tabular-nums">
-          {label}
-        </span>
+        <span className="text-muted-foreground text-sm font-medium tabular-nums">{label}</span>
       </motion.div>
     </AnimatePresence>
   );
