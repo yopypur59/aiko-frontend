@@ -23,8 +23,8 @@ const VIEW_MOTION_PROPS = {
   animate: 'visible',
   exit: 'hidden',
   transition: {
-    duration: 0.5,
-    ease: 'linear',
+    duration: 0.35,
+    ease: 'easeOut',
   },
 };
 

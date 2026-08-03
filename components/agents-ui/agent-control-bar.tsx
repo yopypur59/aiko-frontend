@@ -288,8 +288,8 @@ export function AgentControlBar({
     <div
       aria-label="Voice assistant controls"
       className={cn(
-        'bg-background border-input/50 dark:border-muted flex flex-col border p-3 drop-shadow-md/3',
-        variant === 'livekit' ? 'rounded-[31px]' : 'rounded-lg',
+        'bg-card/90 border-border/60 flex flex-col border p-3 shadow-sm backdrop-blur-sm transition-shadow duration-200',
+        variant === 'livekit' ? 'rounded-[28px]' : 'rounded-xl',
         className
       )}
       {...props}
@@ -393,11 +393,11 @@ export function AgentControlBar({
             disabled={!isConnected}
             className={cn(
               variant === 'livekit' &&
-                'bg-destructive/10 dark:bg-destructive/10 text-destructive hover:bg-destructive/20 dark:hover:bg-destructive/20 focus:bg-destructive/20 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/4 rounded-full font-mono text-xs font-bold tracking-wider'
+                'bg-destructive/8 dark:bg-destructive/12 text-destructive hover:bg-destructive/15 dark:hover:bg-destructive/20 focus:bg-destructive/15 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/10 rounded-full font-sans text-xs font-semibold tracking-wide transition-colors duration-150'
             )}
           >
-            <span className="hidden md:inline">END CALL</span>
-            <span className="inline md:hidden">END</span>
+            <span className="hidden md:inline">End Call</span>
+            <span className="inline md:hidden">End</span>
           </AgentDisconnectButton>
         )}
       </div>

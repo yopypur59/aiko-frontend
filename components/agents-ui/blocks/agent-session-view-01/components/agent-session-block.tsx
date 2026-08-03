@@ -8,6 +8,7 @@ import {
   AgentControlBar,
   type AgentControlBarControls,
 } from '@/components/agents-ui/agent-control-bar';
+import { AikoStatus } from '@/components/app/aiko-status';
 import { cn } from '@/lib/shadcn/utils';
 import { TileLayout } from './tile-view';
 
@@ -208,7 +209,8 @@ export function AgentSessionView_01({
       {...props}
     >
       <Fade top className="absolute inset-x-4 top-0 z-10 h-40" />
-      {/* transcript */}
+
+      {/* Transcript */}
       <AnimatePresence>
         {isChatOpen && (
           <motion.div
@@ -224,7 +226,7 @@ export function AgentSessionView_01({
         )}
       </AnimatePresence>
 
-      {/* Tile layout */}
+      {/* Tile layout — visualizer */}
       <TileLayout
         isChatOpen={isChatOpen}
         themeMode={themeMode}
@@ -238,7 +240,23 @@ export function AgentSessionView_01({
         audioVisualizerGridColumnCount={audioVisualizerGridColumnCount}
         audioVisualizerWaveLineWidth={audioVisualizerWaveLineWidth}
       />
-      {/* Bottom */}
+
+      {/* AIKO Status — shown below visualizer when chat is closed */}
+      <AnimatePresence>
+        {!isChatOpen && (
+          <motion.div
+            key="aiko-status"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { delay: 1.0, duration: 0.4 } }}
+            exit={{ opacity: 0, transition: { duration: 0.2 } }}
+            className="pointer-events-none absolute inset-x-0 bottom-[175px] z-40 flex justify-center md:bottom-[210px]"
+          >
+            <AikoStatus state={agentState} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Bottom controls */}
       <motion.div
         {...BOTTOM_VIEW_MOTION_PROPS}
         className="absolute inset-x-3 bottom-0 z-50 md:inset-x-12"
@@ -258,6 +276,7 @@ export function AgentSessionView_01({
             )}
           </AnimatePresence>
         )}
+
         <div className="bg-background relative mx-auto max-w-2xl pb-3 md:pb-12">
           <AgentControlBar
             variant="livekit"
